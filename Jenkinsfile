@@ -1,9 +1,9 @@
 pipeline {
-  agent { label 'vmubuntu' }
+  // agent { label 'vmubuntu' }
+  agent any
 
   environment {
     DOCKER_IMAGE_NAME = "orders-service/app:latest"
-    SSH_CREDENTIALS = "ssh-deploy-key"
     STAGING_URL = "http://localhost:3000"
   }
 
